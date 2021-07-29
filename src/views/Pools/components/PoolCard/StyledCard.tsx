@@ -52,6 +52,7 @@ export const StyledCard = styled(Card)<{ isPromoted?: PromotedStyleCardProps; is
 export const StyledCardInner = styled(Box)`
   background: ${({ theme }) => theme.card.background};
   border-radius: ${({ theme }) => theme.radii.card};
+ 
 `
 
 export default StyledCard

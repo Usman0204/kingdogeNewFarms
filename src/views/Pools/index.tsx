@@ -376,9 +376,9 @@ const Pools: React.FC = () => {
           
         )}
         {viewMode === ViewMode.CARD ? cardLayout : tableLayout}
-     
-        <StyledCard >
-        <div style={{ padding: '24px' }}>
+          <div style={{ display:'flex', justifyContent:'center'}}>
+          <StyledCard >
+        <div style={{ padding: '24px', width:'352px'}}>
           <CardTitle>
             {TranslateString(414, 'Your Project?')}{' '}
             <span role="img" aria-label="eyes">
@@ -416,6 +416,8 @@ const Pools: React.FC = () => {
           <CommunityTag />
         </Footer>
       </StyledCard>
+          </div>
+       
         <div ref={loadMoreRef} />
         {/* <Coming /> */}
         {/* <Image

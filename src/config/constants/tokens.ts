@@ -86,8 +86,8 @@ const tokens = {
   babydoge: {
     symbol: 'babydoge',
     address: {
-      56: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
-      97: '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
+      56: '0x5A3010d4d8D3B5fB49f8B6E57FB9E48063f16700',
+      97: '0x5A3010d4d8D3B5fB49f8B6E57FB9E48063f16700',
     },
     decimals: 18,
     projectLink: 'https://pancakeswap.finance/',
@@ -95,8 +95,8 @@ const tokens = {
   minidoge: {
     symbol: 'minidoge',
     address: {
-      56: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
-      97: '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
+      56: '0x95a1199EBA84ac5f19546519e287d43D2F0E1b41',
+      97: '0x95a1199EBA84ac5f19546519e287d43D2F0E1b41',
     },
     decimals: 18,
     projectLink: 'https://pancakeswap.finance/',
