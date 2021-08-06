@@ -358,7 +358,7 @@ const Menu: React.FC = (props) => {
 
         }
 
-        <MenuItem href="http://ec2-34-222-238-25.us-west-2.compute.amazonaws.com:44863/#/swap">
+        <MenuItem href="https://sphynxswap.finance/#/swap">
           {/* <Icon /> */}
           {
             !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/chart-swap.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp; Swap & charts</b></div>
