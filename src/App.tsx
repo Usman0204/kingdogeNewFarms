@@ -11,9 +11,9 @@ import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
 import { useMenuToggle } from 'state/application/hooks'
 import { ConnectorId, SearchIcon } from '@pancakeswap-libs/uikit'
+import PyramidImage from 'assets/svg/pyramid.png'
 import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
-
 import SuspenseWithChunkError from './components/SuspenseWithChunkError'
 import { ToastListener } from './contexts/ToastsContext'
 import PageLoader from './components/Loader/PageLoader'
@@ -160,6 +160,21 @@ const AccountWrapper = styled.div`
   }
 `
 
+
+const BannerWrapper = styled.div`
+  width: 516px;
+  height: 516px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  & img {
+    position: absolute;
+    right: -40px;
+    bottom: -60px;
+  }
+  `
+
 const App: React.FC = () => {
   usePollBlockNumber()
   useEagerConnect()
@@ -210,6 +225,9 @@ const App: React.FC = () => {
             <Button onClick={onPresentConnectModal}>Connect</Button>
         }
       </TopBar>
+      <BannerWrapper>
+                  <img src={PyramidImage} alt='Pyramid' />
+                </BannerWrapper>
       <SuspenseWithChunkError fallback={<PageLoader />}>
         <Switch>
           <Route path="/" exact>
