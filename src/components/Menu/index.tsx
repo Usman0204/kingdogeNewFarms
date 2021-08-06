@@ -8,6 +8,7 @@ import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import useAuth from 'hooks/useAuth'
 import { usePriceCakeBusd } from 'state/farms/hooks'
+import Illustration from 'assets/svg/Illustration.svg'
 import { useProfile } from 'state/profile/hooks'
 import { ReactComponent as MenuOpenIcon } from 'assets/svg/icon/MenuOpenIcon.svg'
 import { ReactComponent as WalletIcon } from 'assets/svg/icon/WalletIcon.svg'
@@ -50,6 +51,15 @@ const MenuWrapper = styled.div<{ toggled: boolean }>`
   }
 `;
 
+const IllustrationWrapper = styled.div`
+  width: 100%;
+  margin-left: -24px;
+  & img {
+    width: 100%;
+  }
+`
+
+
 const MenuIconWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -85,7 +95,7 @@ const WalletHeading = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #F9AC61;
+  background: #DE64ED;
   width: 100%;
   height: 56px;
   padding: 0 48px;
@@ -119,7 +129,7 @@ const TokenItemWrapper = styled.div<{ toggled: boolean }>`
 `
 
 const ButtonWrapper = styled.div`
-  background: #F9AC61;
+  background: #DE64ED;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,7 +150,7 @@ const MenuItem = styled.a`
     margin-left: 12px;
   }
   &:hover {
-    background: #F9AC61;
+    background: #DE64ED;
   }
 `
 const SocialWrapper = styled.div`
@@ -382,6 +392,11 @@ const Menu: React.FC = (props) => {
             </div>
           </SocialIconsWrapper>
         </SocialWrapper>
+        {!menuToggled && 
+          <IllustrationWrapper>
+            <img src={Illustration} alt='Illustration' />
+          </IllustrationWrapper>      
+        }
       </MenuContentWrapper>
 
       {/* <UikitMenu
