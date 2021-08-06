@@ -196,6 +196,7 @@ const Menu: React.FC = (props) => {
   // const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
 
   const { menuToggled, toggleMenu } = useMenuToggle();
+
   const [showAllToken, setShowAllToken] = useState(false);
 
   const [walletbalance, setWalletBalance] = useState('');
@@ -314,7 +315,7 @@ const Menu: React.FC = (props) => {
 
 
   return (
-    <MenuWrapper toggled={menuToggled} {...props}>
+    <MenuWrapper toggled={menuToggled}>
       <img src='/main.png' alt='Main Logo' />
       <MenuIconWrapper>
         {!menuToggled && <span>Main Menu</span>
@@ -360,7 +361,7 @@ const Menu: React.FC = (props) => {
         <MenuItem href="http://ec2-34-222-238-25.us-west-2.compute.amazonaws.com:44863/#/swap">
           {/* <Icon /> */}
           {
-            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/farms.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp; Swap & charts</b></div>
+            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/chart-swap.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp; Swap & charts</b></div>
           }
         </MenuItem>
         <MenuItem href="/farms">
