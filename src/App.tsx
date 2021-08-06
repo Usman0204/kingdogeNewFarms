@@ -185,6 +185,7 @@ const App: React.FC = () => {
       <GlobalStyle />
       <Menu />
       <BodyWrapper toggled={menuToggled}>
+        <BodyOverlay toggled={menuToggled} />
       <TopBar>
         <Button onClick={() => { toggleMenu(!menuToggled) }}>
           <svg viewBox='0 0 24 24' width='24px'>

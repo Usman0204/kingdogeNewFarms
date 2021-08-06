@@ -347,6 +347,12 @@ const Menu: React.FC = (props) => {
 
         }
 
+        <MenuItem href="http://ec2-34-222-238-25.us-west-2.compute.amazonaws.com:44863/#/swap">
+          {/* <Icon /> */}
+          {
+            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/farms.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp; Swap & charts</b></div>
+          }
+        </MenuItem>
         <MenuItem href="/farms">
           {/* <Icon /> */}
           {
@@ -360,16 +366,16 @@ const Menu: React.FC = (props) => {
             !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/pools.svg" alt="logo" style={{ width: '25px' }} /><b>&nbsp; Pools</b></div>
           }
         </MenuItem>
-        <MenuItem href="/pools">
+        <MenuItem href="/">
           {/* <Icon /> */}
           {
-            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/pools.svg" alt="logo" style={{ width: '25px' }} /><b> &nbsp;Predication</b></div>
+            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/predication.png" alt="logo" style={{ width: '25px' }} /><b> Predication </b><span style={{fontSize:'13px'}}>(Coming Soon)</span> </div>
           }
         </MenuItem>
-        <MenuItem href="/pools">
+        <MenuItem href="/">
           {/* <Icon /> */}
           {
-            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/ifo.png" alt="logo" style={{ width: '25px' }} /><b> &nbsp;IFO</b></div>
+            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/ifo.png" alt="logo" style={{ width: '25px' }} /><b>IFO </b><span style={{fontSize:'13px'}}>(Coming Soon)</span></div>
           }
         </MenuItem>
         <SocialWrapper>
