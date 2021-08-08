@@ -171,7 +171,7 @@ const BannerWrapper = styled.div`
   & img {
     position: absolute;
     right: -40px;
-    bottom: -60px;
+    bottom: -190px;
   }
   `
 

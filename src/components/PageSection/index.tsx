@@ -37,6 +37,7 @@ const ChildrenWrapper = styled(Container)`
 
   ${({ theme }) => theme.mediaQueries.sm} {
     padding-top: 32px;
+    z-index: 99999;
     padding-bottom: 32px;
   }
 

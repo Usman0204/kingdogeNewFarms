@@ -9,6 +9,7 @@ import DesktopImage from './DesktopImage'
 const StyledHero = styled(Box)`
   background: ${({ theme }) => theme.colors.gradients.bubblegum};
   padding-bottom: 32px;
+  z-index: 99999;
   padding-top: 32px;
 `
 
