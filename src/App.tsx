@@ -167,11 +167,11 @@ const BannerWrapper = styled.div`
   position: absolute;
   right: 0px;
   bottom: 0px;
-  overflow: hidden;
+//overflow: hidden;
   & img {
     position: absolute;
-    right: -40px;
-    bottom: -190px;
+  //  right: -40px;
+    bottom: -250px;
   }
   `
 
@@ -226,9 +226,7 @@ const App: React.FC = () => {
             <Button onClick={onPresentConnectModal}>Connect</Button>
         }
       </TopBar>
-      <BannerWrapper>
-                  <img src={PyramidImage} alt='Pyramid' />
-                </BannerWrapper>
+    
       <SuspenseWithChunkError fallback={<PageLoader />}>
         <Switch>
           <Route path="/" exact>
@@ -245,9 +243,14 @@ const App: React.FC = () => {
           </Route>
           <Route component={NotFound} />
         </Switch>
+     
       </SuspenseWithChunkError>
+      <BannerWrapper>
+                  <img src={PyramidImage} alt='Pyramid' />
+                </BannerWrapper>
       {/* </Menu> */}
       </BodyWrapper>
+      
       <EasterEgg iterations={2} />
       <ToastListener />
       <DatePickerPortal />

@@ -9,6 +9,7 @@ import FlexLayout from 'components/Layout/Flex'
 import Page from 'components/Layout/Page'
 import { useFarms, usePollFarmsData, usePriceCakeBusd } from 'state/farms/hooks'
 import usePersistState from 'hooks/usePersistState'
+import PyramidImage from 'assets/svg/pyramid.png'
 import { Farm } from 'state/types'
 import { useTranslation } from 'contexts/Localization'
 import { getBalanceNumber } from 'utils/formatBalance'
@@ -26,6 +27,7 @@ import FarmTabButtons from './components/FarmTabButtons'
 import { RowProps } from './components/FarmTable/Row'
 import ToggleView from './components/ToggleView/ToggleView'
 import { DesktopColumnSchema, ViewMode } from './components/types'
+
 
 const ControlContainer = styled.div`
   display: flex;
@@ -93,7 +95,19 @@ const ViewControls = styled.div`
     }
   }
 `
-
+const BannerWrapper = styled.div`
+  width: 516px;
+  height: 516px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  & img {
+    position: absolute;
+    right: -40px;
+    bottom: -190px;
+  }
+  `
 const StyledImage = styled(Image)`
   margin-left: auto;
   margin-right: auto;
@@ -450,8 +464,12 @@ const Farms: React.FC = () => {
           </Flex>
         )}
         <div ref={loadMoreRef} />
+  
         {/* <StyledImage src="/images/decorations/3dpan.png" alt="Pancake illustration" width={120} height={103} /> */}
       </Page>
+      {/* <BannerWrapper>
+                  <img src={PyramidImage} alt='Pyramid' />
+                </BannerWrapper> */}
     </>
   )
 }

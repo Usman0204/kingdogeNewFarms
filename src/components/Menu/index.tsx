@@ -360,12 +360,14 @@ const Menu: React.FC = (props) => {
 
         <MenuItem href="https://sphynxswap.finance/#/swap">
           {/* <Icon /> */}
+         {  menuToggled && <img src="/chart-swap.png" alt="logo" style={{ width: '25px' }} />}
           {
             !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/chart-swap.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp; Swap & charts</b></div>
           }
         </MenuItem>
         <MenuItem href="/farms">
           {/* <Icon /> */}
+          {  menuToggled && <img src="/farms.png" alt="logo" style={{ width: '25px' }} />}
           {
             !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/farms.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp; Farms</b></div>
           }
@@ -373,17 +375,20 @@ const Menu: React.FC = (props) => {
 
         <MenuItem href="/pools">
           {/* <Icon /> */}
+          {  menuToggled && <img src="/pools.svg" alt="logo" style={{ width: '25px' }} />}
           {
             !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/pools.svg" alt="logo" style={{ width: '25px' }} /><b>&nbsp; Pools</b></div>
           }
         </MenuItem>
         <MenuItem href="/">
           {/* <Icon /> */}
+          {  menuToggled && <img src="/predication.png" alt="logo" style={{ width: '25px' }} />}
           {
             !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/predication.png" alt="logo" style={{ width: '25px' }} /><b> Predication </b><span style={{fontSize:'13px'}}>(Coming Soon)</span> </div>
           }
         </MenuItem>
         <MenuItem href="/">
+        {  menuToggled && <img src="/ifo.png" alt="logo" style={{ width: '25px' }} />}
           {/* <Icon /> */}
           {
             !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/ifo.png" alt="logo" style={{ width: '25px' }} /><b>IFO </b><span style={{fontSize:'13px'}}>(Coming Soon)</span></div>
