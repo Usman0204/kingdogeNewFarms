@@ -33,10 +33,10 @@ const Multiplier: React.FunctionComponent<MultiplierProps> = ({ multiplier }) =>
   const { t } = useTranslation()
   const tooltipContent = (
     <>
-      {t('The multiplier represents the amount of DOGESON rewards each farm gets.')}
+      {t('The multiplier represents the amount of Sphynx rewards each farm gets.')}
       <br />
       <br />
-      {t('For example, if a 1x farm was getting 1 DOGESON per block, a 40x farm would be getting 40 DOGESON per block.')}
+      {t('For example, if a 1x farm was getting 1 Sphynx per block, a 40x farm would be getting 40 Sphynx per block.')}
     </>
   )
   const { targetRef, tooltip, tooltipVisible } = useTooltip(tooltipContent, {
