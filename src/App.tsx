@@ -162,16 +162,16 @@ const AccountWrapper = styled.div`
 
 
 const BannerWrapper = styled.div`
-  width: 516px;
-  height: 516px;
+  width: 380px;
+  height: 380px;
   position: absolute;
   right: 0px;
-  bottom: 0px;
+  bottom: -280px;
 //overflow: hidden;
   & img {
     position: absolute;
   //  right: -40px;
-    bottom: -250px;
+    //bottom: -400px;
   }
   `
 
