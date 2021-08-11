@@ -7,6 +7,7 @@ import { usePollBlockNumber } from 'state/block/hooks'
 import { usePollCoreFarmData } from 'state/farms/hooks'
 import { useFetchProfile } from 'state/profile/hooks'
 import { DatePickerPortal } from 'components/DatePicker'
+import { injected, walletconnect } from 'connectors'
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
 import { useMenuToggle } from 'state/application/hooks'
@@ -69,7 +70,7 @@ const BodyOverlay = styled.div<{ toggled: boolean }>`
   bottom: 0;
   background: white;
   opacity: 0.2;
-  z-index: 9;
+ // z-index: 9;
   display: ${(props) => props.toggled ? 'none' : 'block'};
   ${({ theme }) => theme.mediaQueries.xl} {
     display: none;
@@ -168,6 +169,19 @@ const BannerWrapper = styled.div`
   right: 0px;
   bottom: -280px;
 //overflow: hidden;
+
+${({ theme }) => theme.mediaQueries.xs} {
+  position: sticky;
+}
+${({ theme }) => theme.mediaQueries.sm} {
+  position: sticky;
+}
+${({ theme }) => theme.mediaQueries.xs} {
+  position: sticky;
+}
+${({ theme }) => theme.mediaQueries.lg} {
+  position: absolute;
+}
   & img {
     position: absolute;
   //  right: -40px;
@@ -189,9 +203,10 @@ const App: React.FC = () => {
 
   const handleLogin = (connectorId: ConnectorId) => {
     if (connectorId === 'walletconnect') {
-      // return activate(walletconnect)
+    
+      return activate(walletconnect)
     }
-    // return activate(injected)
+   return activate(injected)
   }
   const { onPresentConnectModal } = useWalletModal(handleLogin, deactivate, account as string)
   return (
