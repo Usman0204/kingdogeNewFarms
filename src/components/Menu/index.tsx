@@ -199,7 +199,7 @@ const Menu: React.FC = (props) => {
 
   const [showAllToken, setShowAllToken] = useState(false);
 
-  const [walletbalance, setWalletBalance] = useState('');
+  const [walletbalance, setWalletBalance] =useState(0);
 
   const [getallToken, setAllTokens] = useState([]);
 
@@ -221,9 +221,9 @@ const Menu: React.FC = (props) => {
 
     const testnet = 'https://bsc-dataseed1.defibit.io';
     const web3 = new Web3(new Web3.providers.HttpProvider(testnet));
-    const balance = account && web3.eth.getBalance(account).then((res) => {
-      setWalletBalance(res);
-    })
+    const balance= account && web3.eth.getBalance(account).then((res : any)=>{
+      setWalletBalance(res/1000000000000000000)
+       })
   }
 
   const getData = `
