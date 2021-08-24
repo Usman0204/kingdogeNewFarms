@@ -384,14 +384,28 @@ const Menu: React.FC = (props) => {
           {/* <Icon /> */}
           {  menuToggled && <img src="/predication.png" alt="logo" style={{ width: '25px' }} />}
           {
-            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/predication.png" alt="logo" style={{ width: '25px' }} /><b> Predication </b><span style={{fontSize:'13px'}}>(Coming Soon)</span> </div>
+            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/predication.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp;&nbsp;NFT Marketplace &nbsp;(coming soon) </b> </div>
+          }
+        </MenuItem>
+        <MenuItem href="/">
+          {/* <Icon /> */}
+          {  menuToggled && <img src="/predication.png" alt="logo" style={{ width: '25px' }} />}
+          {
+            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/predication.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp;&nbsp;Prediction&nbsp; (coming soon) </b> </div>
           }
         </MenuItem>
         <MenuItem href="/">
         {  menuToggled && <img src="/ifo.png" alt="logo" style={{ width: '25px' }} />}
           {/* <Icon /> */}
           {
-            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/ifo.png" alt="logo" style={{ width: '25px' }} /><b>IFO </b><span style={{fontSize:'13px'}}>(Coming Soon)</span></div>
+            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/ifo.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp;&nbsp;IFO&nbsp; (coming soon)</b></div>
+          }
+        </MenuItem>
+        <MenuItem href="/">
+        {  menuToggled && <img src="/more_horiz.png" alt="logo" style={{ width: '25px' }} />}
+          {/* <Icon /> */}
+          {
+            !menuToggled && <div style={{ display: 'flex',color: 'white', alignItems: 'center' }}><img src="/more_horiz.png" alt="logo" style={{ width: '25px' }} /><b>&nbsp;&nbsp;More</b></div>
           }
         </MenuItem>
         <SocialWrapper>
